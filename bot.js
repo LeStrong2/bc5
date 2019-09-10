@@ -42,14 +42,13 @@ client.on("message", message => {
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
-      message.channel.fetchMessages({limit: msg}).then(messages => message.DM.bulkDelete(messages)).catch(console.error);
+   if(!message.member.hasPermission('')) return message.reply('..');
+        var msg;
+        msg = parseInt();
       message.channel.sendMessage("", {embed: {
         title: "Done | تــم مسح الشات",
         color: 0x06DF00,
         description: "تم مسح الرسائل ",
-        footer: {
-          text: "©KBOOSHDev"
-        }
       }}).then(msg => {msg.delete(3000)});
                           }
 
