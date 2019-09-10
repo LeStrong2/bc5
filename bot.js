@@ -37,22 +37,5 @@ if (message.content.startsWith(adminprefix + 'setava')) {
 }
 });
 
-client.on("message", message => {
-    var prefix = "#";
- 
-            var args = message.content.substring(prefix.length).split(" ");
-            if (message.content.startsWith(prefix + "clear")) {
-   if(!message.member.hasPermission('')) return message.reply('..');
-        var msg;
-        msg = parseInt();
-      message.channel.sendMessage("", {embed: {
-        title: "Done | تــم مسح الشات",
-        color: 0x06DF00,
-        description: "تم مسح الرسائل ",
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-});
 
 client.login(process.env.TOKEN);
